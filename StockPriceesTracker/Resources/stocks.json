@@ -1,0 +1,152 @@
+[
+  {
+    "symbol": "AAPL",
+    "name": "Apple Inc.",
+    "description": "Apple designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories. The company also sells a range of related services.",
+    "price": 178.5
+  },
+  {
+    "symbol": "GOOG",
+    "name": "Alphabet Inc.",
+    "description": "Alphabet is a holding company that engages in the acquisition and operation of different companies. Its segments include Google Services, Google Cloud, and Other Bets.",
+    "price": 141.8
+  },
+  {
+    "symbol": "TSLA",
+    "name": "Tesla Inc.",
+    "description": "Tesla designs, develops, manufactures, leases, and sells electric vehicles, and energy generation and storage systems in the United States and internationally.",
+    "price": 245.3
+  },
+  {
+    "symbol": "AMZN",
+    "name": "Amazon.com Inc.",
+    "description": "Amazon engages in retail sale of consumer products, advertising, and subscription services through online and physical stores across the world.",
+    "price": 185.6
+  },
+  {
+    "symbol": "MSFT",
+    "name": "Microsoft Corp.",
+    "description": "Microsoft develops and supports software, services, devices, and solutions worldwide across Productivity, Intelligent Cloud, and Personal Computing segments.",
+    "price": 378.9
+  },
+  {
+    "symbol": "NVDA",
+    "name": "NVIDIA Corp.",
+    "description": "NVIDIA provides graphics, computing, and networking solutions worldwide. The company operates through Compute & Networking and Graphics segments.",
+    "price": 495.2
+  },
+  {
+    "symbol": "META",
+    "name": "Meta Platforms Inc.",
+    "description": "Meta builds technologies that help people connect and share. The company operates through Family of Apps and Reality Labs segments.",
+    "price": 505.75
+  },
+  {
+    "symbol": "NFLX",
+    "name": "Netflix Inc.",
+    "description": "Netflix provides entertainment services, offering TV series, documentaries, feature films, and games across various genres and languages worldwide.",
+    "price": 620.4
+  },
+  {
+    "symbol": "AMD",
+    "name": "Advanced Micro Devices",
+    "description": "AMD operates as a semiconductor company providing x86 microprocessors, GPUs, and field-programmable gate arrays for data center and embedded markets.",
+    "price": 155.8
+  },
+  {
+    "symbol": "INTC",
+    "name": "Intel Corp.",
+    "description": "Intel designs, manufactures, and sells computing and related products and services worldwide. The company delivers integrated circuit design and manufacturing.",
+    "price": 42.15
+  },
+  {
+    "symbol": "CRM",
+    "name": "Salesforce Inc.",
+    "description": "Salesforce provides customer relationship management technology that brings companies and customers together across sales, service, marketing, and commerce.",
+    "price": 272.3
+  },
+  {
+    "symbol": "ORCL",
+    "name": "Oracle Corp.",
+    "description": "Oracle provides products and services that address enterprise information technology environments, including cloud and license business and hardware products.",
+    "price": 125.6
+  },
+  {
+    "symbol": "ADBE",
+    "name": "Adobe Inc.",
+    "description": "Adobe operates as a diversified software company providing content creation, document management, and digital marketing solutions worldwide.",
+    "price": 555.9
+  },
+  {
+    "symbol": "PYPL",
+    "name": "PayPal Holdings",
+    "description": "PayPal operates as a technology platform that enables digital payments on behalf of merchants and consumers worldwide.",
+    "price": 62.4
+  },
+  {
+    "symbol": "SQ",
+    "name": "Block Inc.",
+    "description": "Block provides financial services and mobile payment solutions including Square for sellers and Cash App for individuals.",
+    "price": 68.25
+  },
+  {
+    "symbol": "SHOP",
+    "name": "Shopify Inc.",
+    "description": "Shopify provides a commerce platform and services for businesses of all sizes, enabling them to sell products online, in retail stores, and through social channels.",
+    "price": 78.9
+  },
+  {
+    "symbol": "UBER",
+    "name": "Uber Technologies",
+    "description": "Uber develops and operates proprietary technology applications providing ride-hailing, food delivery, and freight brokerage services worldwide.",
+    "price": 48.3
+  },
+  {
+    "symbol": "LYFT",
+    "name": "Lyft Inc.",
+    "description": "Lyft operates a peer-to-peer marketplace for on-demand ridesharing in the United States and select cities in Canada.",
+    "price": 15.7
+  },
+  {
+    "symbol": "SNAP",
+    "name": "Snap Inc.",
+    "description": "Snap operates as a technology company focusing on camera and social media through Snapchat, Spectacles, and various advertising products.",
+    "price": 11.85
+  },
+  {
+    "symbol": "PINS",
+    "name": "Pinterest Inc.",
+    "description": "Pinterest operates as a visual discovery engine allowing users to find inspiration for various activities including recipes, travel, and style.",
+    "price": 32.4
+  },
+  {
+    "symbol": "ROKU",
+    "name": "Roku Inc.",
+    "description": "Roku operates a TV streaming platform connecting users to streaming content, providing operating systems for smart TVs and streaming devices.",
+    "price": 88.5
+  },
+  {
+    "symbol": "ZM",
+    "name": "Zoom Video Comms.",
+    "description": "Zoom provides a unified communications platform that enables video, voice, chat, and content sharing through its cloud-native technology.",
+    "price": 70.2
+  },
+  {
+    "symbol": "DOCU",
+    "name": "DocuSign Inc.",
+    "description": "DocuSign provides electronic signature technology and agreement cloud for businesses to manage the process of creating and managing agreements digitally.",
+    "price": 58.6
+  },
+  {
+    "symbol": "COIN",
+    "name": "Coinbase Global",
+    "description": "Coinbase operates as a financial technology company providing end-to-end financial infrastructure and technology for the crypto-economy.",
+    "price": 142.7
+  },
+  {
+    "symbol": "PLTR",
+    "name": "Palantir Technologies",
+    "description": "Palantir builds and deploys software platforms for the intelligence community and commercial enterprises to assist in counter-terrorism and data-driven decision making.",
+    "price": 22.5
+  }
+]
