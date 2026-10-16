@@ -1,5 +1,6 @@
 import Foundation
 
+// assumed properties of Stock
 nonisolated struct Stock: Identifiable, Equatable, Sendable {
     let id: String
     let symbol: String
@@ -17,6 +18,7 @@ nonisolated struct Stock: Identifiable, Equatable, Sendable {
     }
 }
 
+// enum for showing direction for price change
 enum PriceChangeDirection: Sendable {
     case up
     case down
@@ -29,6 +31,7 @@ struct PriceUpdate: Codable, Sendable {
     let timestamp: Date
 }
 
+// Sort options required
 enum SortOption: String, CaseIterable, Sendable {
     case byPrice = "Price"
     case byPriceChange = "Price Change"
@@ -40,6 +43,7 @@ enum ConnectionStatus: Equatable, Sendable {
     case disconnected
 }
 
+// the Stocks json is placed in resources and data is taken from json
 enum StockCatalog {
     static let all: [Stock] = load()
 
@@ -56,7 +60,7 @@ enum StockCatalog {
     }
 }
 
-/// One entry of `stocks.json`: the static info plus the opening price.
+// DTO for stock json map, it will map into Stock
 nonisolated private struct StockSeed: Decodable {
     let symbol: String
     let name: String

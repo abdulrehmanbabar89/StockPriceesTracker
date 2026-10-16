@@ -1,5 +1,7 @@
 import Foundation
 
+// This is my dependency injector to avoid always initializing services
+
 @MainActor
 final class DependencyContainer {
     static let shared = DependencyContainer()

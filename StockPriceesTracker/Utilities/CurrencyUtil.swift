@@ -1,6 +1,6 @@
 import Foundation
 
-/// Formats prices in the currency of a locale (the user's locale by default).
+// this is my Util class to show proper currency code according to current locale like UAE, US or any country. CUrrently I took USD by default
 nonisolated final class CurrencyUtil: Sendable {
     static let shared = CurrencyUtil()
 

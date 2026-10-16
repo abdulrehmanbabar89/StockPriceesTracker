@@ -1,6 +1,8 @@
 import Foundation
 import Observation
 
+// Using an observable view model so UI updates are done reactively. 
+
 @Observable
 final class StockListViewModel {
     private(set) var stocks: [Stock] = StockCatalog.all

@@ -1,6 +1,7 @@
 import Foundation
 import Synchronization
 
+// Broadcaster to update the statuses of different things properly specially connection status of websocket and price updates in stock and web socket service.
 nonisolated final class AsyncBroadcaster<Element: Sendable>: Sendable {
     private struct State {
         var continuations: [UUID: AsyncStream<Element>.Continuation] = [:]

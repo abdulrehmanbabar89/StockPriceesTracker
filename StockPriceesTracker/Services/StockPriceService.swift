@@ -77,6 +77,7 @@ actor StockPriceService: StockPriceServiceProtocol {
         receiveTask = nil
     }
 
+    // Here we are sending stream to socket after each second
     private func startSending() {
         let interval = updateInterval
         feedTask = Task { [weak self] in
@@ -88,7 +89,7 @@ actor StockPriceService: StockPriceServiceProtocol {
         }
     }
 
-    /// Returns `false` when the update could not be sent.
+    // here is am sending next price update for a random stock and some randomw value from -0.03 to 0.03
     private func sendNextPrice() async -> Bool {
         let symbol = symbols.randomElement() ?? "AAPL"
         let currentPrice = livePrices[symbol] ?? 100.0
@@ -116,6 +117,7 @@ actor StockPriceService: StockPriceServiceProtocol {
         }
     }
 
+    // recieving socket message
     private func startReceiving() {
         let stream = webSocketService.messageStream
         receiveTask = Task { [weak self] in

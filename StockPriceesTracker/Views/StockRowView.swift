@@ -55,8 +55,12 @@ struct PriceChangeIndicator: View {
     }
 
     private var iconName: String {
-        if change > 0 { return "arrow.up.right" }
-        if change < 0 { return "arrow.down.right" }
+        if change > 0 {
+            return "arrow.up.right"
+        }
+        else if change < 0 {
+            return "arrow.down.right"
+        }
         return "minus"
     }
 

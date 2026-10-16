@@ -5,6 +5,8 @@ actor MockWebSocketService: WebSocketServiceProtocol {
     nonisolated var messageStream: AsyncStream<Data> { AsyncStream { $0.finish() } }
     nonisolated var statusStream: AsyncStream<ConnectionStatus> { AsyncStream { $0.finish() } }
 
+    
+    // adding for tests
     private(set) var connectCallCount = 0
     private(set) var disconnectCallCount = 0
 

@@ -4,6 +4,8 @@ nonisolated enum WebSocketError: Error {
     case notConnected
 }
 
+// I have not used any socket client. I have used native URLSessionWebSocketTask
+
 nonisolated protocol WebSocketServiceProtocol: Sendable {
     /// Opens the socket and returns once the handshake has completed. Throws if it cannot connect.
     func connect() async throws
@@ -33,7 +35,7 @@ actor WebSocketService: WebSocketServiceProtocol {
     }
 
     func connect() async throws {
-        // Drop any previous socket so its receive loop can't report on the new connection.
+        // Closing current connection if any. 
         tearDown()
 
         let task = session.webSocketTask(with: url)
@@ -83,6 +85,7 @@ actor WebSocketService: WebSocketServiceProtocol {
         webSocketTask = nil
     }
 
+    // this is where I recieve message from Socket and process the message and stream it
     private func receiveMessages(from task: URLSessionWebSocketTask) async {
         while !Task.isCancelled {
             do {
