@@ -12,8 +12,12 @@ nonisolated struct Stock: Identifiable, Equatable, Sendable {
     var priceChangePercentage: Double
 
     var changeDirection: PriceChangeDirection {
-        if priceChange > 0 { return .up }
-        if priceChange < 0 { return .down }
+        if priceChange > 0 {
+            return .up
+        }
+        else if priceChange < 0 {
+            return .down
+        }
         return .unchanged
     }
 }
