@@ -8,28 +8,22 @@ nonisolated final class CurrencyUtil: Sendable {
 
     let locale: Locale
 
-    /// - Parameter locale: Defaults to `autoupdatingCurrent`, so a region change in Settings
-    ///   is picked up without restarting the app.
     init(locale: Locale = .autoupdatingCurrent) {
         self.locale = locale
     }
 
-    /// ISO 4217 code of the locale's currency, e.g. "USD", "EUR", "JPY".
     var currencyCode: String {
         locale.currency?.identifier ?? Self.fallbackCurrencyCode
     }
 
-    /// "$1,234.50", "1.234,50 €", "¥1,234.50"…
     func formatPrice(_ value: Double) -> String {
         value.formatted(currencyStyle)
     }
 
-    /// Always signed: "+$1.25", "-$0.40", "+$0.00".
     func formatPriceChange(_ value: Double) -> String {
         value.formatted(currencyStyle.sign(strategy: .always(showZero: true)))
     }
 
-    /// Takes a value already in percent units and always signs it: 2.5 → "+2.50%".
     func formatPercentChange(_ value: Double) -> String {
         value.formatted(
             .percent
@@ -40,8 +34,7 @@ nonisolated final class CurrencyUtil: Sendable {
         )
     }
 
-    /// Always two decimals so small moves don't round away in currencies such as JPY that
-    /// have no minor unit.
+    // show always 2 decimal places
     private var currencyStyle: FloatingPointFormatStyle<Double>.Currency {
         .currency(code: currencyCode)
             .locale(locale)

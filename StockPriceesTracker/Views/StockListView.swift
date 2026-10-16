@@ -3,34 +3,29 @@ import SwiftUI
 struct StockListView: View {
     @Bindable var viewModel: StockListViewModel
 
+    @Environment(AppCoordinator.self) private var coordinator
+
     var body: some View {
-        NavigationStack {
-            List {
-                ForEach(viewModel.stocks) { stock in
-                    NavigationLink(value: stock.symbol) {
-                        StockRowView(stock: stock)
-                    }
+        List {
+            ForEach(viewModel.stocks) { stock in
+                Button {
+                    coordinator.push(.stockDetail(symbol: stock.symbol))
+                } label: {
+                    StockRowView(stock: stock)
                 }
+                .foregroundStyle(.primary)
             }
-            .navigationTitle("Stocks")
-            .navigationDestination(for: String.self) { symbol in
-                StockDetailView(
-                    viewModel: StockDetailViewModel(
-                        symbol: symbol,
-                        listViewModel: viewModel
-                    )
-                )
+        }
+        .navigationTitle("Stocks")
+        .toolbar {
+            ToolbarItem(placement: .topBarLeading) {
+                ConnectionStatusView(status: viewModel.connectionStatus)
             }
-            .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    ConnectionStatusView(status: viewModel.connectionStatus)
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    sortMenu
-                }
-                ToolbarItem(placement: .bottomBar) {
-                    feedButton
-                }
+            ToolbarItem(placement: .topBarTrailing) {
+                sortMenu
+            }
+            ToolbarItem(placement: .bottomBar) {
+                feedButton
             }
         }
     }

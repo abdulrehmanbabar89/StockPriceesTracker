@@ -24,4 +24,8 @@ final class DependencyContainer {
     lazy var stockListViewModel: StockListViewModel = {
         StockListViewModel(priceService: stockPriceService)
     }()
+
+    lazy var appCoordinator: AppCoordinator = {
+        AppCoordinator(stockListViewModel: stockListViewModel)
+    }()
 }

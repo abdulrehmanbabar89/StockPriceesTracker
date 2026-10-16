@@ -6,8 +6,8 @@ struct StockPriceesTrackerApp: App {
 
     var body: some Scene {
         WindowGroup {
-            // giving first view as listview
-            StockListView(viewModel: container.stockListViewModel)
+            // the coordinator owns the navigation stack and shows the list as the first screen
+            CoordinatorView(coordinator: container.appCoordinator)
         }
     }
 }
